@@ -13,6 +13,10 @@ Debian 6+, Ubuntu 12.04 LTS (probably works on older versions, but this is what 
 | attribute | default setting | description |
 |:---------------------------------|:---------------|:-----------------------------------------|
 |`default[:cpufrequtils][:governor]`| `performance` | Typically we're installing on server hardware which needs every cycle available |
+|`default[:cpufrequtils][:enable]`| `true` | Defaults from /etc/init.d/cpufrequtils (set to false to prevent running at boot) |
+|`default[:cpufrequtils][:min_speed]`| `0` | Minimum clock speed in Hz, default allows for minimum the processor can support |
+|`default[:cpufrequtils][:max_speed]`| `0` | Maximum clock speed in Hz, default allows for maximum the processor can support |
+
 
 ## Usage
 Simply add cpufrequtils to your run_list
